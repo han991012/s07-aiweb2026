@@ -3,74 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- ⬇⬇⬇ 본인 정보로 교체 ⬇⬇⬇ -->
-  <title>🚀 [본인 프로젝트 이름] — by &lt;본인 익명 ID&gt;</title>
-  <meta name="description" content="[본인 프로젝트 한 줄 설명]" />
-  <!-- ⬆⬆⬆ 본인 정보로 교체 ⬆⬆⬆ -->
+  <title>📊 코스피 옵션 AI 브리핑 — by S07</title>
+  <meta name="description" content="KRX 옵션 일별매매정보를 AI가 한국어 시황 리포트로 변환하는 데모" />
+
+  <!-- 폰트 (한글 Serif + Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
-  <!-- 11주차 — contents.md inline 렌더용 -->
+
+  <!-- contents.md 자동 렌더링 -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md@3?register"></script>
 </head>
 <body>
 
-  <!-- ============ HERO ============ -->
+  <!-- ============ HERO (신문 1면 스타일) ============ -->
   <header class="hero">
     <div class="container">
-      <!-- ⬇⬇⬇ 본인 프로젝트로 교체 (예: "🚀 칼로리카운터") ⬇⬇⬇ -->
-      <h1>🚀 [본인 프로젝트 이름]</h1>
-      <p class="tagline">[프로젝트가 무엇을 하는지 한 줄로]</p>
-      <!-- ⬆⬆⬆ 본인 프로젝트로 교체 ⬆⬆⬆ -->
+
+      <!-- 상단 신문 메타 라인 -->
+      <div class="masthead">
+        <div class="line"></div>
+        <span class="masthead-text">Daily Market Briefing · vol. 2026</span>
+        <div class="line"></div>
+      </div>
+
+      <!-- 메인 타이틀 -->
+      <h1 class="hero-title">📊 코스피 옵션 AI 브리핑</h1>
+      <p class="hero-subtitle">KOSPI Option Daily Briefing · powered by GPT-4o-mini</p>
+
+      <!-- 다이아몬드 구분자 -->
+      <div class="divider">
+        <div class="divider-line"></div>
+        <span class="diamond">◆</span>
+        <div class="divider-line"></div>
+      </div>
+
+      <!-- 태그라인 -->
+      <p class="tagline">영업일 하나만 입력하면, KRX 옵션 시장 데이터를<br/>AI가 한국어 시황 리포트로 변환해 드립니다.</p>
+
+      <!-- CTA 버튼 -->
+      <div class="cta">
+        <a href="https://han991012-kospi-option-ai-briefing.hf.space" class="btn btn-primary" target="_blank" rel="noopener">
+          ▶ Live Demo 열기
+        </a>
+        <a href="https://github.com/han991012/kospi-option-ai-briefing" class="btn btn-secondary" target="_blank" rel="noopener">
+          ⌨ Source on GitHub
+        </a>
+      </div>
+
+      <!-- 하단 캔들 차트 모티프 -->
+      <svg class="candle-art" viewBox="0 0 600 50" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <line x1="0" y1="40" x2="600" y2="40" stroke="#C5C0B5" stroke-width="0.5"/>
+        <g>
+          <rect x="90" y="20" width="6" height="20" fill="#C5402A"/>
+          <line x1="93" y1="14" x2="93" y2="22" stroke="#C5402A" stroke-width="1"/>
+          <rect x="140" y="15" width="6" height="18" fill="#0F2A47"/>
+          <line x1="143" y1="10" x2="143" y2="18" stroke="#0F2A47" stroke-width="1"/>
+          <rect x="190" y="22" width="6" height="14" fill="#C5402A"/>
+          <line x1="193" y1="18" x2="193" y2="26" stroke="#C5402A" stroke-width="1"/>
+          <rect x="240" y="12" width="6" height="22" fill="#0F2A47"/>
+          <line x1="243" y1="6" x2="243" y2="14" stroke="#0F2A47" stroke-width="1"/>
+          <rect x="290" y="18" width="6" height="16" fill="#C5402A"/>
+          <line x1="293" y1="12" x2="293" y2="20" stroke="#C5402A" stroke-width="1"/>
+          <rect x="340" y="22" width="6" height="14" fill="#0F2A47"/>
+          <line x1="343" y1="18" x2="343" y2="26" stroke="#0F2A47" stroke-width="1"/>
+          <rect x="390" y="10" width="6" height="24" fill="#C5402A"/>
+          <line x1="393" y1="4" x2="393" y2="14" stroke="#C5402A" stroke-width="1"/>
+          <rect x="440" y="20" width="6" height="16" fill="#0F2A47"/>
+          <line x1="443" y1="14" x2="443" y2="22" stroke="#0F2A47" stroke-width="1"/>
+          <rect x="490" y="15" width="6" height="20" fill="#C5402A"/>
+          <line x1="493" y1="10" x2="493" y2="20" stroke="#C5402A" stroke-width="1"/>
+        </g>
+      </svg>
+
     </div>
   </header>
 
   <main class="container">
 
-    <!-- ============ 데모 카드 ============ -->
+    <!-- ============ 데모 화면 카드 ============ -->
     <section class="demo-card">
-      <!-- ⬇⬇⬇ screenshot.png 를 본인 프로젝트 화면 캡쳐로 교체 ⬇⬇⬇ -->
-      <img class="screenshot" src="screenshot.png" alt="[본인 프로젝트] 데모 화면" />
-      <!-- ⬆⬆⬆ screenshot.png 를 본인 프로젝트 화면 캡쳐로 교체 ⬆⬆⬆ -->
-
-      <div class="cta">
-        <!-- ⬇⬇⬇ 다음 주(10주차) 데모 띄운 후 href="#" 를 진짜 도메인으로 ⬇⬇⬇ -->
-        <!-- <a class="btn btn-primary" href="https://example-demo.aiweb2026.site">
-          ▶ Live Demo
-        </a> -->
-        <a href="https://jyhancoco-hf-starter.hf.space" class="btn btn-primary" target="_blank" rel="noopener">
-          ▶ Live Demo
-        </a>
-        <!-- ⬆⬆⬆ 다음 주에 href="https://&lt;본인 ID&gt;-demo.aiweb2026.site" 로 변경 ⬆⬆⬆ -->
-
-        <!-- ⬇⬇⬇ 본인 GitHub 리포 URL 로 교체 ⬇⬇⬇ -->
-        <a class="btn btn-secondary" href="https://github.com/han991012/kospi-option-ai-briefing" target="_blank" rel="noopener">
-          ⌨ Source on GitHub
-        </a>
-        <!-- ⬆⬆⬆ 본인 GitHub 리포 URL 로 교체 ⬆⬆⬆ -->
-      </div>
+      <img class="screenshot" src="screenshot.png" alt="코스피 옵션 AI 브리핑 데모 화면" onerror="this.style.display='none'" />
     </section>
 
-    <!-- ============ 본문 (contents.md 인라인 렌더) ============ -->
+    <!-- ============ contents.md 인라인 렌더 ============ -->
     <section class="content">
-      <!-- ⬇⬇⬇ 같은 폴더의 contents.md 를 수정하면 자동 반영 ⬇⬇⬇ -->
       <zero-md src="contents.md" no-shadow></zero-md>
-      <!-- ⬆⬆⬆ 같은 폴더의 contents.md 를 수정하면 자동 반영 ⬆⬆⬆ -->
     </section>
 
-    <!-- ============ Giscus 댓글 (8장에서 추가) ============ -->
+    <!-- ============ Giscus 댓글 ============ -->
     <section id="comments" class="comments">
       <h2>💬 이 프로젝트 어떠세요?</h2>
       <p class="comments-note">
         GitHub 계정으로 로그인하면 댓글이 본인 리포의 GitHub Discussions에 자동 저장됩니다.
       </p>
 
-      <!--
-        ⬇⬇⬇ 9주차 SECTION 8 에서 giscus.app 가 자동 생성한 script 코드를 여기에 붙여넣기 ⬇⬇⬇
-        교체할 속성:
-          - data-repo
-          - data-repo-id
-          - data-category-id
-        나머지 속성은 그대로 두세요.
-      -->
       <div class="giscus"></div>
       <script src="https://giscus.app/client.js"
         data-repo="han991012/s07-aiweb2026"
@@ -87,14 +116,13 @@
         crossorigin="anonymous"
         async>
       </script>
-      <!-- ⬆⬆⬆ giscus 설정값 교체 ⬆⬆⬆ -->
     </section>
   </main>
 
   <footer>
     <div class="container">
       <p>
-        2026 AI 웹 융합 · 9주차 데모 소개 페이지 ·
+        2026 AI 웹 융합 · 기말 프로젝트 데모 소개 페이지 ·
         <a href="https://aiweb2026.site">aiweb2026.site</a>
       </p>
     </div>
