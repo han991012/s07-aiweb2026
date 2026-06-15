@@ -100,7 +100,160 @@
       </div>
       <div class="content-card">
         <!-- 같은 폴더의 contents.md 를 수정하면 자동 반영 -->
-        <zero-md src="contents.md" no-shadow></zero-md>
+        <zero-md src="contents.md" no-shadow>
+          <template>
+            <style>
+              /* zero-md 기본 CSS 완전 차단 + 다크 럭셔리 톤 직접 주입 */
+              :host, * {
+                font-family: 'Noto Sans KR', 'Inter', -apple-system, sans-serif !important;
+              }
+              .markdown-body {
+                background: transparent !important;
+                color: #CBD5E1 !important;
+              }
+              h1 {
+                font-family: 'Noto Serif KR', serif !important;
+                font-size: 28px !important;
+                font-weight: 600 !important;
+                color: #F1F5F9 !important;
+                margin: 32px 0 16px !important;
+                letter-spacing: -0.015em !important;
+                line-height: 1.3 !important;
+                border-bottom: none !important;
+                padding-bottom: 0 !important;
+              }
+              h1:first-child { margin-top: 0 !important; }
+              h2 {
+                font-family: 'Noto Serif KR', serif !important;
+                font-size: 22px !important;
+                font-weight: 600 !important;
+                color: #F1F5F9 !important;
+                margin: 36px 0 14px !important;
+                padding-bottom: 10px !important;
+                border-bottom: 0.5px solid #1F2937 !important;
+                letter-spacing: -0.01em !important;
+                line-height: 1.3 !important;
+              }
+              h2:first-child { margin-top: 0 !important; }
+              h3 {
+                font-family: 'Noto Serif KR', serif !important;
+                font-size: 18px !important;
+                font-weight: 600 !important;
+                color: #D4AF37 !important;
+                margin: 24px 0 10px !important;
+                letter-spacing: -0.005em !important;
+                border-bottom: none !important;
+              }
+              h4 {
+                font-size: 15px !important;
+                font-weight: 600 !important;
+                color: #F1F5F9 !important;
+                margin: 20px 0 8px !important;
+              }
+              p {
+                color: #CBD5E1 !important;
+                margin-bottom: 14px !important;
+                line-height: 1.85 !important;
+                font-size: 14.5px !important;
+              }
+              strong, b {
+                color: #F1F5F9 !important;
+                font-weight: 600 !important;
+              }
+              em, i {
+                color: #D4AF37 !important;
+                font-style: italic !important;
+              }
+              a {
+                color: #D4AF37 !important;
+                text-decoration: none !important;
+                border-bottom: 0.5px solid rgba(212, 175, 55, 0.4) !important;
+              }
+              a:hover {
+                border-bottom-color: #D4AF37 !important;
+              }
+              ul, ol {
+                padding-left: 24px !important;
+                margin-bottom: 16px !important;
+                color: #CBD5E1 !important;
+              }
+              li {
+                color: #CBD5E1 !important;
+                margin-bottom: 8px !important;
+                line-height: 1.75 !important;
+                font-size: 14.5px !important;
+              }
+              li::marker { color: #D4AF37 !important; }
+              blockquote {
+                background: #0B0F17 !important;
+                border-left: 3px solid #D4AF37 !important;
+                padding: 16px 22px !important;
+                margin: 20px 0 !important;
+                border-radius: 0 6px 6px 0 !important;
+                color: #94A3B8 !important;
+              }
+              blockquote p {
+                color: #94A3B8 !important;
+                font-style: italic !important;
+                margin-bottom: 0 !important;
+              }
+              code {
+                background: #0B0F17 !important;
+                color: #D4AF37 !important;
+                padding: 2px 8px !important;
+                border-radius: 4px !important;
+                font-family: 'JetBrains Mono', 'Consolas', monospace !important;
+                font-size: 13px !important;
+                border: 0.5px solid #1F2937 !important;
+              }
+              pre {
+                background: #0B0F17 !important;
+                border: 0.5px solid #1F2937 !important;
+                border-radius: 8px !important;
+                padding: 18px 22px !important;
+                overflow-x: auto !important;
+                margin: 20px 0 !important;
+              }
+              pre code {
+                background: transparent !important;
+                border: none !important;
+                padding: 0 !important;
+                color: #F1F5F9 !important;
+                font-size: 13px !important;
+                line-height: 1.7 !important;
+              }
+              hr {
+                border: none !important;
+                border-top: 0.5px solid #1F2937 !important;
+                margin: 36px 0 !important;
+              }
+              table {
+                width: 100% !important;
+                border-collapse: collapse !important;
+                margin: 20px 0 !important;
+                font-size: 13.5px !important;
+              }
+              th {
+                background: #0B0F17 !important;
+                color: #94A3B8 !important;
+                padding: 12px 14px !important;
+                text-align: left !important;
+                font-weight: 600 !important;
+                font-size: 11px !important;
+                letter-spacing: 0.1em !important;
+                text-transform: uppercase !important;
+                border-bottom: 0.5px solid #1F2937 !important;
+              }
+              td {
+                padding: 12px 14px !important;
+                color: #CBD5E1 !important;
+                border-bottom: 0.5px solid #1F2937 !important;
+              }
+              tr:last-child td { border-bottom: none !important; }
+              img { max-width: 100% !important; border-radius: 6px !important; }
+            </style>
+          </template>
+        </zero-md>
       </div>
     </section>
 
